@@ -1,3 +1,4 @@
+#Created 2024 Joshua Henize
 import lexer
 
 class Node:
@@ -30,16 +31,6 @@ class BinaryOPNode:
         return self.right_number_node
     def set_pval(self, value):
         self.right_number_node = value
-
-class UnaryOPNode: 
-    def __init__(self, op_token, number_node) -> None:
-        self.op_token = op_token
-        self.number_node = number_node
-
-    def get_pval(self):
-        return self.number_node
-    def set_pval(self, value):
-        self.number_node = value
 
 class Parser: 
     tokens = []
